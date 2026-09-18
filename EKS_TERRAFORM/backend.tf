@@ -1,7 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "tertries-devops-terraform-starefile" # Replace with your actual S3 bucket name
-    key    = "EKS/terraform.tfstate"
-    region = "ap-south-1"
+    bucket       = "srikanthgram-devsecops-tetris-state-20260918"
+    key          = "eks/terraform.tfstate"
+    region       = "ap-south-1"
+    encrypt      = true
+    use_lockfile = true
   }
 }
